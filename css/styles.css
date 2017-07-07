@@ -4,6 +4,14 @@
   padding-bottom: 25px;
 }
 
+.well{
+  background: #EDEAE5;
+}
+
+.jumbotron{
+  background: #EDEAE5;
+}
+
 h1{
   margin-bottom: -5px;
 }
@@ -25,13 +33,26 @@ button{
   color: white;
 }
 
-.well{
-  background: #EDEAE5;
+/*input[type="radio"]{
+  border: 20px;
+  width: 100%;
+}*/
+
+/*input[type="radio"] + label{
+  border: 5px solid lightblue;
+  background-color: lightblue;
+  cursor: pointer;
+  display: block;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  line-height: 40px;
 }
 
-.jumbotron{
-  background: #EDEAE5;
-}
+input[type="radio"]:checked + label {
+  border: 5px solid blue;
+  background-color: dodgerblue;
+}*/
 
 #name{
   width: 50%;
@@ -42,21 +63,33 @@ button{
 }
 
 #csharp{
-  display: none
+  display: none;
 }
 
 #css{
-  display: none
+  display: none;
 }
 
 #ruby{
-  display: none
+  display: none;
 }
 
 #rubyOrCsharp{
-  display: none
+  display: none;
 }
 
 #none{
-  display: none
+  display: none;
+}
+
+#csharpinfo{
+  display: none;
+}
+
+#cssinfo{
+  display: none;
+}
+
+#rubyinfo{
+  display: none;
 }

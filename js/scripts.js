@@ -14,7 +14,7 @@ $(document).ready(function(){
       $("#form").hide();
       $("#css").show();
     }else if( ((userLargercompany==="no"&&userMicrosoft==="no") && (userStartup==="yes"||userLesscode==="yes")) ||
-    ((userLargercompany==="no"||usermicrosoft==="no") && (userStartup==="yes"&&userLesscode==="yes")) ){
+    ((userLargercompany==="no"||userMicrosoft==="no") && (userStartup==="yes"&&userLesscode==="yes")) ){
       $("#form").hide();
       $("#ruby").toggle();
     }else if( ((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="no"&&userLesscode==="no")) ||
@@ -31,6 +31,16 @@ $(document).ready(function(){
     } else {
       alert("Fill out all the fields!");
     }
+  });
+
+  $("#csharpimg").click(function(){
+    $("#csharpinfo").fadeIn();
+  });
+  $("#cssimg").click(function(){
+    $("#cssinfo").fadeIn();
+  });
+  $("#rubyimg").click(function(){
+    $("#rubyinfo").fadeIn();
   });
 });
 
