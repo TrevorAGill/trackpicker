@@ -10,10 +10,15 @@
 
 .jumbotron{
   background: #EDEAE5;
+  margin-bottom: 15px;
 }
 
 .results-header{
   display:none;
+}
+
+.questions{
+  background: lightgray;
 }
 
 h1{

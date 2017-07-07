@@ -43,7 +43,6 @@ $(document).ready(function(){
 
     $(".username2").append(userName);
     $(".languageresult").append(languageresult);
-
   });
 
   $(".csharpimg").click(function(){
