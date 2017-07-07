@@ -8,71 +8,53 @@ $(document).ready(function(){
     var userStartup = $("input:radio[name=startup]:checked").val();
     var userLesscode = $("input:radio[name=lesscode]:checked").val();
 
-    $(".username2").append(userName);
 
-    if(userWebdesign==="yes"){
+    if(userWebdesign==="yes" && userName!=="" && userLargercompany!=="" && userMicrosoft!=="" && userStartup!=="" && userLesscode!==""){
       $("#form").hide();
+      $(".results-header").show();
       $("#css").show();
-    }else if( ((userLargercompany==="no"&&userMicrosoft==="no") && (userStartup==="yes"||userLesscode==="yes")) ||
-    ((userLargercompany==="no"||userMicrosoft==="no") && (userStartup==="yes"&&userLesscode==="yes")) ){
+      var languageresult = "CSS/Design";
+    }else if( (((userLargercompany==="no"&&userMicrosoft==="no") && (userStartup==="yes"||userLesscode==="yes")) ||
+    ((userLargercompany==="no"||userMicrosoft==="no") && (userStartup==="yes"&&userLesscode==="yes"))) && userName!==""){
       $("#form").hide();
-      $("#ruby").toggle();
-    }else if( ((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="no"&&userLesscode==="no")) ||
-    ((userLargercompany==="yes"&&userMicrosoft==="yes") && (userStartup==="no"||userLesscode==="no")) ){
+      $(".results-header").show();
+      $("#ruby").show();
+      var languageresult = "Ruby/Rails";
+    }else if( (((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="no"&&userLesscode==="no")) ||
+    ((userLargercompany==="yes"&&userMicrosoft==="yes") && (userStartup==="no"||userLesscode==="no"))) && userName!==""){
       $("#form").hide();
-      $("#csharp").toggle();
-    }else if(userLargercompany==="no" && userMicrosoft==="no" && userStartup==="no" && userLesscode==="no"){
+      $(".results-header").show();
+      $("#csharp").show();
+      var languageresult = "C#/.NET";
+    }else if(userLargercompany==="no" && userMicrosoft==="no" && userStartup==="no" && userLesscode==="no" && userName!==""){
       $("#form").hide();
-      $("#none").toggle();
-    }else if((userLargercompany==="yes" && userMicrosoft==="yes" && userStartup==="yes" && userLesscode==="yes") ||
-    ((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="yes"||userLesscode==="yes")) ){
+      $(".results-header").show();
+      $("#none").show();
+      var languageresult = "astronomy";
+    }else if( ((userLargercompany==="yes" && userMicrosoft==="yes" && userStartup==="yes" && userLesscode==="yes") ||
+    ((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="yes"||userLesscode==="yes"))) && userName!==""){
       $("#form").hide();
-      $("#rubyOrCsharp").toggle();
+      $(".results-header").show();
+      $("#rubyOrCsharp").show();
+      var languageresult = "Ruby/Rails or C#/.NET";
     } else {
       alert("Fill out all the fields!");
     }
+
+    $(".username2").append(userName);
+    $(".languageresult").append(languageresult);
+
   });
 
-  $("#csharpimg").click(function(){
+  $(".csharpimg").click(function(){
     $("#csharpinfo").fadeIn();
+    $("#csharpinfo2").fadeIn();
   });
   $("#cssimg").click(function(){
     $("#cssinfo").fadeIn();
   });
-  $("#rubyimg").click(function(){
+  $(".rubyimg").click(function(){
     $("#rubyinfo").fadeIn();
+    $("#rubyinfo2").fadeIn();
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function(){
-//
-//   $("#rsvpinfo").submit(function(event){
-//   var name=$("input#name").val();
-//   var date=$("input#date").val();
-//   var description=$("input#description").val();
-//   var startdate=$("input#startdate").val();
-//   var starttime=$("input#starttime").val();
-//
-//   $(".name").append(name);
-//   $(".date").append(date);
-//   $(".description").append(description);
-//   $(".startdate").append(startdate);
-//   $(".starttime").append(starttime);
-//
-//   $(".message").show();
-//   $(".form").hide();
-//
-//
-//   event.preventDefault();
-//   });
-// });

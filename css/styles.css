@@ -12,8 +12,17 @@
   background: #EDEAE5;
 }
 
+.results-header{
+  display:none;
+}
+
 h1{
   margin-bottom: -5px;
+}
+
+h3{
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 p{
@@ -33,26 +42,10 @@ button{
   color: white;
 }
 
-/*input[type="radio"]{
-  border: 20px;
-  width: 100%;
-}*/
-
-/*input[type="radio"] + label{
-  border: 5px solid lightblue;
-  background-color: lightblue;
+img{
+  margin-bottom: 30px;
   cursor: pointer;
-  display: block;
-  height: 40px;
-  width: 200px;
-  text-align: center;
-  line-height: 40px;
 }
-
-input[type="radio"]:checked + label {
-  border: 5px solid blue;
-  background-color: dodgerblue;
-}*/
 
 #name{
   width: 50%;
@@ -62,34 +55,18 @@ input[type="radio"]:checked + label {
   width: 50%;
 }
 
-#csharp{
+#css, #ruby, #csharp, #rubyOrCsharp, #none{
   display: none;
+  text-align: center
 }
 
-#css{
+#rubyinfo, #rubyinfo2, #csharpinfo, #csharpinfo2, #cssinfo{
   display: none;
-}
-
-#ruby{
-  display: none;
-}
-
-#rubyOrCsharp{
-  display: none;
-}
-
-#none{
-  display: none;
-}
-
-#csharpinfo{
-  display: none;
-}
-
-#cssinfo{
-  display: none;
-}
-
-#rubyinfo{
-  display: none;
+  font-size: 20px;
+  font-style: italic;
+  margin-left: 30px;
+  padding-left: 470px;
+  padding-right: 110px;
+  margin-top: 20px;
+  text-align: justify;
 }
