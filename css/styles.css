@@ -21,13 +21,16 @@
   background: lightgray;
 }
 
+.imagecaption{
+  font-size: 8pt;
+}
+
 h1{
   margin-bottom: -5px;
 }
 
-h3{
+h3, h5{
   text-align: center;
-  padding-bottom: 20px;
 }
 
 p{
@@ -48,8 +51,8 @@ button{
 }
 
 img{
-  margin-bottom: 30px;
   cursor: pointer;
+  padding-top: 20px;
 }
 
 #name{
