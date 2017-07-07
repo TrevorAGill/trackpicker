@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Choose Your Language</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="well">
+        <h1>Choose Your Language</h1>
+        <form id="form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" class="form-control" type="email">
+          </div>
+
+          <p>Are you interested in focusing specifically on front-end web design?</p>
+          <div class="form-group">
+            <div class="radio">
+              <label>
+                <input type="radio" name="webdesign" value="yes">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="webdesign" value="no">
+                No
+              </label>
+            </div>
+          </div>
+
+          <p>Do you like the idea of working for a larger company on business software?</p>
+          <div class="form-group">
+            <div class="radio">
+              <label>
+                <input type="radio" name="largercompany" value="yes">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="largercompany" value="no">
+                No
+              </label>
+            </div>
+          </div>
+
+          <p>Are you interested in working on Microsoft/Windows related applications</p>
+          <div class="form-group">
+            <div class="radio">
+              <label>
+                <input type="radio" name="microsoft" value="yes">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="microsoft" value="no">
+                No
+              </label>
+            </div>
+          </div>
+
+          <p>Would you like to work for a fast-paced startup?</p>
+          <div class="form-group">
+            <div class="radio">
+              <label>
+                <input type="radio" name="startup" value="yes">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="startup" value="no">
+                No
+              </label>
+            </div>
+          </div>
+
+          <p>Do you like the idea of being able to get to a functional product quickly and with fewer lines of code?</p>
+          <div class="form-group">
+            <div class="radio">
+              <label>
+                <input type="radio" name="lesscode" value="yes">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="lesscode" value="no">
+                No
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Choose your own Adventure</button>
+        </form>
+          <div id="csharp">
+          <h3>You should learn C#/.NET</h3>
+          <img src="img/csharp.png" alt="C#/.NET logo">
+          </div>
+
+          <div id="css">
+          <h3>You should learn CSS/Design</h3>
+          <img src="img/css.png" alt="CSS logo" height=400 width=400>
+          </div>
+
+          <div id="ruby">
+          <h3>You should learn Ruby/Rails</h3>
+          <img src="img/ruby.jpg" alt="Ruby/Rails logo">
+          </div>
+
+          <div id="rubyOrCsharp">
+          <h3>You should learn either C#/.NET or Ruby/Rails</h3>
+          <img src="img/csharp.png" alt="C#/.NET logo"><img src="img/ruby.jpg" alt="Ruby/Rails logo">
+          </div>
+
+          <div id="none">
+          <h3>There is not a good programming track match for you.</h3>
+          </div>
+
+  </body>
+</html>
