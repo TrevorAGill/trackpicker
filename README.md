@@ -9,7 +9,7 @@
 _This website is intended for use by folks who are interested in learning how to program but are not sure which programming language they should pursue. The website asks a series of questions via a form aimed at identifying the user's work style and desired work environment. Once the form is submitted, the user inputs are then run through some branching logic in order to present the user with some information about the programming language that they are best suited for._
 
 ## Link
-[Programming Language Selector](http://wedaft.github.io/programminglanguageselector)
+[Programming Language Selector](http://wedaft.github.io/trackpicker)
 
 
 ## Setup/Installation Requirements
