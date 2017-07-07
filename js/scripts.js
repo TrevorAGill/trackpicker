@@ -10,24 +10,21 @@ $(document).ready(function(){
     if(userwebdesign==="yes"){
       $("#form").hide();
       $("#css").show();
-    }else if(userlargercompany==="yes" && usermicrosoft==="yes" && userstartup==="yes" && userlesscode==="yes"){
-      $("#form").hide();
-      $("#rubyOrCsharp").toggle();
-    }else if( (userlargercompany==="no"&&usermicrosoft==="no") && (userstartup==="yes"||userlesscode==="yes") ){
+    }else if( ((userlargercompany==="no"&&usermicrosoft==="no") && (userstartup==="yes"||userlesscode==="yes")) ||
+    ((userlargercompany==="no"||usermicrosoft==="no") && (userstartup==="yes"&&userlesscode==="yes")) ){
       $("#form").hide();
       $("#ruby").toggle();
-    }else if( (userlargercompany==="yes"||usermicrosoft==="yes") && (userstartup==="no"&&userlesscode==="no") ){
-      $("#form").hide();
-      $("#csharp").toggle();
-    }else if( (userlargercompany==="no"||usermicrosoft==="no") && (userstartup==="yes"&&userlesscode==="yes") ){
-      $("#form").hide();
-      $("#ruby").toggle();
-    }else if( (userlargercompany==="yes"&&usermicrosoft==="yes") && (userstartup==="no"||userlesscode==="no") ){
+    }else if( ((userlargercompany==="yes"||usermicrosoft==="yes") && (userstartup==="no"&&userlesscode==="no")) ||
+    ((userlargercompany==="yes"&&usermicrosoft==="yes") && (userstartup==="no"||userlesscode==="no")) ){
       $("#form").hide();
       $("#csharp").toggle();
     }else if(userlargercompany==="no" && usermicrosoft==="no" && userstartup==="no" && userlesscode==="no"){
       $("#form").hide();
       $("#none").toggle();
+    }else if((userlargercompany==="yes" && usermicrosoft==="yes" && userstartup==="yes" && userlesscode==="yes") ||
+    ((userlargercompany==="yes"||usermicrosoft==="yes") && (userstartup==="yes"||userlesscode==="yes")) ){
+      $("#form").hide();
+      $("#rubyOrCsharp").toggle();
     } else {
       alert("Fill out all the fields!");
     }
