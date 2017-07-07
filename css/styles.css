@@ -8,6 +8,39 @@ h1{
   margin-bottom: -5px;
 }
 
+p{
+  color: black;
+}
+
+label{
+  color: black;
+}
+
+body{
+  background-color: #026670;
+}
+
+button{
+  background-color: #026670;
+  color: white;
+}
+
+.well{
+  background: #EDEAE5;
+}
+
+.jumbotron{
+  background: #EDEAE5;
+}
+
+#name{
+  width: 50%;
+}
+
+#email{
+  width: 50%;
+}
+
 #csharp{
   display: none
 }

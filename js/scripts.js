@@ -1,28 +1,31 @@
 $(document).ready(function(){
   $("#form").submit(function(event){
     event.preventDefault();
-    var userwebdesign = $("input:radio[name=webdesign]:checked").val();
-    var userlargercompany = $("input:radio[name=largercompany]:checked").val();
-    var usermicrosoft = $("input:radio[name=microsoft]:checked").val();
-    var userstartup = $("input:radio[name=startup]:checked").val();
-    var userlesscode = $("input:radio[name=lesscode]:checked").val();
+    var userName = $("#name").val();
+    var userWebdesign = $("input:radio[name=webdesign]:checked").val();
+    var userLargercompany = $("input:radio[name=largercompany]:checked").val();
+    var userMicrosoft = $("input:radio[name=microsoft]:checked").val();
+    var userStartup = $("input:radio[name=startup]:checked").val();
+    var userLesscode = $("input:radio[name=lesscode]:checked").val();
 
-    if(userwebdesign==="yes"){
+    $(".username2").append(userName);
+
+    if(userWebdesign==="yes"){
       $("#form").hide();
       $("#css").show();
-    }else if( ((userlargercompany==="no"&&usermicrosoft==="no") && (userstartup==="yes"||userlesscode==="yes")) ||
-    ((userlargercompany==="no"||usermicrosoft==="no") && (userstartup==="yes"&&userlesscode==="yes")) ){
+    }else if( ((userLargercompany==="no"&&userMicrosoft==="no") && (userStartup==="yes"||userLesscode==="yes")) ||
+    ((userLargercompany==="no"||usermicrosoft==="no") && (userStartup==="yes"&&userLesscode==="yes")) ){
       $("#form").hide();
       $("#ruby").toggle();
-    }else if( ((userlargercompany==="yes"||usermicrosoft==="yes") && (userstartup==="no"&&userlesscode==="no")) ||
-    ((userlargercompany==="yes"&&usermicrosoft==="yes") && (userstartup==="no"||userlesscode==="no")) ){
+    }else if( ((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="no"&&userLesscode==="no")) ||
+    ((userLargercompany==="yes"&&userMicrosoft==="yes") && (userStartup==="no"||userLesscode==="no")) ){
       $("#form").hide();
       $("#csharp").toggle();
-    }else if(userlargercompany==="no" && usermicrosoft==="no" && userstartup==="no" && userlesscode==="no"){
+    }else if(userLargercompany==="no" && userMicrosoft==="no" && userStartup==="no" && userLesscode==="no"){
       $("#form").hide();
       $("#none").toggle();
-    }else if((userlargercompany==="yes" && usermicrosoft==="yes" && userstartup==="yes" && userlesscode==="yes") ||
-    ((userlargercompany==="yes"||usermicrosoft==="yes") && (userstartup==="yes"||userlesscode==="yes")) ){
+    }else if((userLargercompany==="yes" && userMicrosoft==="yes" && userStartup==="yes" && userLesscode==="yes") ||
+    ((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="yes"||userLesscode==="yes")) ){
       $("#form").hide();
       $("#rubyOrCsharp").toggle();
     } else {
