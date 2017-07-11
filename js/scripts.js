@@ -9,30 +9,27 @@ $(document).ready(function(){
     var userLesscode = $("input:radio[name=lesscode]:checked").val();
 
 
-    if(userWebdesign==="yes" && userName!=="" && userLargercompany!=="" && userMicrosoft!=="" && userStartup!=="" && userLesscode!==""){
+    if(userWebdesign==="yes" && userName!=="" && userLargercompany!=="" && userMicrosoft!=="" && userStartup!=="" && userLesscode!=="") {
       $("#form").hide();
       $(".results-header").show();
       $("#css").show();
       var languageresult = "CSS/Design";
-    }else if( (((userLargercompany==="no"&&userMicrosoft==="no") && (userStartup==="yes"||userLesscode==="yes")) ||
-    ((userLargercompany==="no"||userMicrosoft==="no") && (userStartup==="yes"&&userLesscode==="yes"))) && userName!==""){
+    } else if( (((userLargercompany==="no"&&userMicrosoft==="no") && (userStartup==="yes"||userLesscode==="yes")) || ((userLargercompany==="no"||userMicrosoft==="no") && (userStartup==="yes"&&userLesscode==="yes"))) && userName!=="") {
       $("#form").hide();
       $(".results-header").show();
       $("#ruby").show();
       var languageresult = "Ruby/Rails";
-    }else if( (((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="no"&&userLesscode==="no")) ||
-    ((userLargercompany==="yes"&&userMicrosoft==="yes") && (userStartup==="no"||userLesscode==="no"))) && userName!==""){
+    } else if( (((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="no"&&userLesscode==="no")) || ((userLargercompany==="yes"&&userMicrosoft==="yes") && (userStartup==="no"||userLesscode==="no"))) && userName!=="") {
       $("#form").hide();
       $(".results-header").show();
       $("#csharp").show();
       var languageresult = "C#/.NET";
-    }else if(userLargercompany==="no" && userMicrosoft==="no" && userStartup==="no" && userLesscode==="no" && userName!==""){
+    } else if(userLargercompany==="no" && userMicrosoft==="no" && userStartup==="no" && userLesscode==="no" && userName!=="") {
       $("#form").hide();
       $(".results-header").show();
       $("#none").show();
       var languageresult = "astronomy";
-    }else if( ((userLargercompany==="yes" && userMicrosoft==="yes" && userStartup==="yes" && userLesscode==="yes") ||
-    ((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="yes"||userLesscode==="yes"))) && userName!==""){
+    } else if( ((userLargercompany==="yes" && userMicrosoft==="yes" && userStartup==="yes" && userLesscode==="yes") || ((userLargercompany==="yes"||userMicrosoft==="yes") && (userStartup==="yes"||userLesscode==="yes"))) && userName!=="") {
       $("#form").hide();
       $(".results-header").show();
       $("#rubyOrCsharp").show();
